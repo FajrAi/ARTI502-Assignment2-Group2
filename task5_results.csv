@@ -1,0 +1,15 @@
+name,arch,lr,batch_size,epochs,optimizer,data,final_train_loss,final_test_loss,final_test_acc,best_test_acc,time_s
+arch=Baseline,Baseline,0.001,64,10,Adam,raw,1.0818,1.1507,58.71,58.71,96.0
+arch=Wider,Wider,0.001,64,10,Adam,raw,0.4695,0.7638,75.35,75.61,102.6
+arch=DeepBN,DeepBN,0.001,64,10,Adam,raw,0.3873,0.5549,82.01,82.34,119.3
+lr=0.01,Wider,0.01,64,10,Adam,raw,1.4969,1.4355,48.38,48.38,102.3
+lr=0.001,Wider,0.001,64,10,Adam,raw,0.462,0.8216,73.86,74.72,102.3
+lr=0.0001,Wider,0.0001,64,10,Adam,raw,1.1252,1.0818,61.87,61.87,102.5
+bs=32,Wider,0.001,32,10,Adam,raw,0.4861,0.8222,73.7,74.45,130.0
+bs=64,Wider,0.001,64,10,Adam,raw,0.4699,0.7995,74.21,74.7,99.6
+bs=128,Wider,0.001,128,10,Adam,raw,0.588,0.7311,74.81,74.81,86.4
+bs=256,Wider,0.001,256,10,Adam,raw,0.7158,0.798,72.24,72.24,79.6
+opt=SGD(lr=0.01),Wider,0.01,64,10,SGD,raw,0.5065,0.8152,73.2,73.95,98.7
+"DeepBN, 20 epochs",DeepBN,0.001,64,20,Adam,raw,0.176,0.5496,84.89,84.89,240.8
+DeepBN 20ep + norm,DeepBN,0.001,64,20,Adam,norm,0.1814,0.6366,83.41,84.82,334.5
+DeepBN 20ep + norm+aug,DeepBN,0.001,64,20,Adam,aug,0.5661,0.4641,84.41,84.82,1019.7
